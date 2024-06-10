@@ -2,18 +2,14 @@
 
     <div class="sidebar-section">
         <h5><span>목록</span></h5>
-            <!-- Post Categories -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    {% assign sortedCategories = page.categories | sort %}
-                    {% for category in sortedCategories %}
-                    <li>
-                        <a href="{{ site.baseurl }}/categories#{{ category | slugify }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
+        <ul class="tags">
+            {% assign all_categories = site.categories | sort %}
+            {% for category in all_categories %}
+            <li>
+                <a href="{{ site.baseurl }}/categories#{{ category[0] | slugify }}">{{ category[0] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 
     <div class="sidebar-section">
