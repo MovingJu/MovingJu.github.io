@@ -1,7 +1,7 @@
 title: "MovingJu"
 email: baramishe@gmail.com
 timezone: UTC
-baseurl: "/affiliates-jekyll-theme"
+baseurl: "/movingju.github.io"
 permalink: "/:title/"
 logo: 'https://avatars.githubusercontent.com/u/158475573?v=4'
 favicon: 'assets/images/favicon.ico'
