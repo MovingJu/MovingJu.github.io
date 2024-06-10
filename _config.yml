@@ -1,9 +1,9 @@
-title: "Affiliates"
-email: wowthemesnet@gmail.com
+title: "MovingJu"
+email: baramishe@gmail.com
 timezone: UTC
 baseurl: "/affiliates-jekyll-theme"
 permalink: "/:title/"
-logo: 'assets/images/logo.png'
+logo: 'https://avatars.githubusercontent.com/u/158475573?v=4'
 favicon: 'assets/images/favicon.ico'
 author: Sal
 paginate: 30
@@ -38,14 +38,14 @@ authors:
     avatar: 'assets/images/john.png'
     email: wowthemesnet@gmail.com
     web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Affiliates theme demo, a Jekyll template compatible with Github pages."
+    twitter: 
+    description: "This is my very first page."
 
 # Social
 social:
-  instagram: https://www.instagram.com/bootstrapstarter/
-  facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
-  twitter: https://twitter.com/bstartercom
+  instagram: https://www.instagram.com/baramisjunior/
+  facebook: 
+  twitter: 
 
 # Plugins
 plugins: 
