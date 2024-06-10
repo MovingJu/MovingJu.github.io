@@ -32,19 +32,18 @@ authors:
     email: baramishe@gmail.com
     web: https://github.com/MovingJu/movingju.github.io
     description: "Artificial Intelligence student."
-  john:
-    name: John
-    display_name: John
-    avatar: 'assets/images/john.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: 
-    description: "This is my very first page."
+  MovingJu:
+    name: MovingJu
+    display_name: MovingJu
+    avatar: 'https://avatars.githubusercontent.com/u/158475573?v=4'
+    email: baramishe@gmail.com
+    web: https://github.com/MovingJu/movingju.github.io
+    description: "Artificial Intelligence student."
 
 # Social
 social:
   instagram: https://www.instagram.com/baramisjunior/
-  facebook: 
+  facebook: https://www.facebook.com/profile.php?id=100009087725229
   twitter: 
 
 # Plugins
