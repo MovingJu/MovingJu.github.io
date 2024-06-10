@@ -5,5 +5,6 @@ author: MovingJu
 categories: [book_review]
 image: assets/images/books/lineralgebra_for_programmer.jpg
 ---
-### Hwang Hyun BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEN is BABABABABABABOOOOOOO.
+
+책 리뷰
 
