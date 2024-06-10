@@ -4,7 +4,7 @@ timezone: UTC
 url: "http://movingju.github.io"
 baseurl: ""
 permalink: "/:title/"
-logo: 'https://avatars.githubusercontent.com/u/158475573?v=4'
+logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 author: MovingJu
 paginate: 30
