@@ -1,7 +1,8 @@
 title: "MovingJu"
 email: baramishe@gmail.com
 timezone: UTC
-baseurl: "/movingju.github.io"
+url: "http://movingju.github.io"
+baseurl: ""
 permalink: "/:title/"
 logo: 'https://avatars.githubusercontent.com/u/158475573?v=4'
 favicon: 'assets/images/favicon.ico'
@@ -30,7 +31,7 @@ authors:
     avatar: 'https://avatars.githubusercontent.com/u/158475573?v=4'
     email: baramishe@gmail.com
     web: https://github.com/MovingJu/movingju.github.io
-    description: "Data Scientist with python."
+    description: "Artificial Intelligence student."
   john:
     name: John
     display_name: John
