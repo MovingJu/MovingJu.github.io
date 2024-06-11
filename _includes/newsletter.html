@@ -1,19 +1,42 @@
-<!-- 사용자 이메일을 test.txt에 저장하는 폼 -->
 <style type="text/css">
     #email_signup { background: #fff; clear: left; }
 </style>
 
 <div id="email_signup">
-    <form action="subscribe.php" method="post" id="email-subscribe-form" name="email-subscribe-form" class="validate" target="_blank" novalidate>
+    <form id="email-subscribe-form" name="email-subscribe-form" class="validate" novalidate>
         <div id="email_signup_scroll">
             <h2>사실 아직 개발중입니다. 혼자있고 싶어요...</h2>
 
             <div class="field-group">
-                <input type="email" value="" name="EMAIL" class="required email" id="email-EMAIL" placeholder="E-mail Address">
+                <input type="email" name="EMAIL" class="required email" id="email-EMAIL" placeholder="E-mail Address">
             </div>
             <div class="clear">
-                <input type="submit" value="Subscribe" name="subscribe" id="email-subscribe" class="button">
+                <input type="button" value="Subscribe" name="subscribe" id="email-subscribe" class="button" onclick="saveEmail()">
             </div>
         </div>
     </form>
 </div>
+
+<script type="text/javascript">
+    function saveEmail() {
+        var email = document.getElementById('email-EMAIL').value;
+        if (validateEmail(email)) {
+            var emails = localStorage.getItem('emails');
+            if (emails) {
+                emails = JSON.parse(emails);
+            } else {
+                emails = [];
+            }
+            emails.push(email);
+            localStorage.setItem('emails', JSON.stringify(emails));
+            alert("구독이 완료되었습니다!");
+        } else {
+            alert("유효한 이메일 주소를 입력하세요.");
+        }
+    }
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
