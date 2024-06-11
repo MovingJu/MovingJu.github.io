@@ -1,15 +1,23 @@
 <?php
-// 이메일 주소를 저장할 파일 경로
-$filepath = "subscribers.txt";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
+    // 사용자로부터 이메일을 받아옵니다.
+    $email = $_POST['EMAIL'];
 
-    // 이메일 주소를 파일에 추가
-    if (file_put_contents($filepath, $email . PHP_EOL, FILE_APPEND | LOCK_EX) !== false) {
-        echo "이메일이 성공적으로 저장되었습니다.";
+    // 이메일이 유효한지 확인합니다.
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // test.txt 파일에 이메일을 추가합니다.
+        $file = fopen("test.txt", "a");
+        if ($file) {
+            fwrite($file, $email . PHP_EOL);
+            fclose($file);
+            echo "구독이 완료되었습니다!";
+        } else {
+            echo "파일을 열 수 없습니다.";
+        }
     } else {
-        echo "이메일 저장에 실패했습니다.";
+        echo "유효한 이메일 주소를 입력하세요.";
     }
+} else {
+    echo "잘못된 요청입니다.";
 }
 ?>
