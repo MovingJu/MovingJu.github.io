@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: "/about/"
-image: assets/images/logo.png
+image: assets/images/system/logo.png
 ---
 
 Hellow, Guest! 현재 대현고등학교에서 활동 중인 **MovingJu**입니다!

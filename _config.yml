@@ -4,8 +4,8 @@ timezone: UTC
 url: "http://movingju.github.io"
 baseurl: ""
 permalink: "/:title/"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+logo: 'assets/images/system/logo.png'
+favicon: 'assets/images/system/favicon.ico'
 author: MovingJu
 paginate: 30
 disqus: 'CarrotWebsite'
