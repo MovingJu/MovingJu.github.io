@@ -1,6 +1,6 @@
 title: "MovingJu"
 email: baramishe@gmail.com
-timezone: UTC
+timezone: Asia/Seoul
 url: "http://movingju.github.io"
 baseurl: ""
 permalink: "/:title/"
