@@ -12,14 +12,9 @@
         </ul>
     </div>
 
-    <div class="sidebar sticky-top">
-        <div class="sidebar-section">
-            <h5><span>주간 알림</span></h5>
-            <form action="subscribe.php" method="post">
-                <input type="email" name="email" placeholder="E-mail Address" required>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
+    <div class="sidebar-section">
+        <h5><span>새소식 알림</span></h5>
+        {% include newsletter.html %}
     </div>
 
     <!-- <div class="sidebar-section">
