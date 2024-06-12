@@ -8,7 +8,7 @@ logo: 'assets/images/system/logo.png'
 favicon: 'assets/images/system/favicon.ico'
 author: MovingJu
 paginate: 30
-disqus: 'CarrotWebsite'
+disqus: 'MovingJu'
 locale: en_us
 lang: en_us
 feed_items: 10
