@@ -28,14 +28,14 @@ authors:
   sal:
     name: MovingJu
     display_name: MovingJu
-    avatar: 'https://avatars.githubusercontent.com/u/158475573?v=4'
+    avatar: '/assets/images/system/full_carrot.png'
     email: baramishe@gmail.com
     web: https://github.com/MovingJu/movingju.github.io
     description: "Artificial Intelligence student."
   MovingJu:
     name: MovingJu
     display_name: MovingJu
-    avatar: 'https://avatars.githubusercontent.com/u/158475573?v=4'
+    avatar: '/assets/images/system/full_carrot.png'
     email: baramishe@gmail.com
     web: https://github.com/MovingJu/movingju.github.io
     description: "Artificial Intelligence student."
