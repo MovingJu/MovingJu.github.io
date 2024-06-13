@@ -3,6 +3,7 @@ topmenu:
 
 - title: Home
   url: ""
+  class: "text-black px-3"
 
 - title: About
   url: "about/"
