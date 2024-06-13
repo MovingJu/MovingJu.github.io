@@ -622,3 +622,7 @@ span.navigation:before {
 .card-title a:hover {
     color: #555; /* 마우스를 올렸을 때 색상 변경 */
 }
+
+.navbar-light .navbar-brand {
+    color: #000; /* 검은색으로 변경할 색상 */
+}
