@@ -1,14 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disqus Comments Integration</title>
+    <style type="text/css">
+        /* Your existing CSS styles */
+        #email_signup { background: #fff; clear: left; }
+    </style>
+</head>
+<body>
+
 <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname = '{{site.disqus}}'; 
+        var disqus_shortname = 'YOUR_DISQUS_SHORTNAME'; // Replace with your Disqus shortname
         var disqus_developer = 0;
         (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
+
+<script type="text/javascript">
+    // JavaScript functions for email subscription (to be removed)
+    function saveEmail() {
+        var email = document.getElementById('email-EMAIL').value;
+        if (validateEmail(email)) {
+            var emails = localStorage.getItem('emails');
+            if (emails) {
+                emails = JSON.parse(emails);
+            } else {
+                emails = [];
+            }
+            emails.push(email);
+            localStorage.setItem('emails', JSON.stringify(emails));
+            alert("구독이 완료되었습니다!");
+        } else {
+            alert("유효한 이메일 주소를 입력하세요.");
+        }
+    }
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
+
+</body>
+</html>
