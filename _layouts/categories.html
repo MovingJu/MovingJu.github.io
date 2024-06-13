@@ -10,28 +10,32 @@ permalink: "/categories.html"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <style>
-    .horizontal-scroll {
-      display: flex;
+    .horizontal-scroll-container {
       overflow-x: auto;
       white-space: nowrap;
       padding-bottom: 10px;
     }
 
-    .horizontal-scroll .post-item {
-      flex: 0 0 auto;
-      margin-right: 15px;
+    .horizontal-scroll {
+      display: inline-flex;
     }
 
-    .horizontal-scroll::-webkit-scrollbar {
+    .post-item {
+      flex: 0 0 auto;
+      margin-right: 15px;
+      display: inline-block;
+    }
+
+    .horizontal-scroll-container::-webkit-scrollbar {
       height: 8px;
     }
 
-    .horizontal-scroll::-webkit-scrollbar-thumb {
+    .horizontal-scroll-container::-webkit-scrollbar-thumb {
       background-color: #888;
       border-radius: 10px;
     }
 
-    .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
       background-color: #555;
     }
   </style>
@@ -39,26 +43,30 @@ permalink: "/categories.html"
 <body>
 
 {% for category in site.categories %}
-<h4 class="mt-5 mb-4 pb-2 border-bottom" id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize small font-weight-bold">In "{{ category[0] }}"</span></h4>
-<div class="row horizontal-scroll">
-{% assign pages_list = category[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-<div class="col-md-4 mb-5 post-item">
-{% include postbox.html %}
-</div>
-{% endif %}
-{% endif %}
-{% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
+<h4 class="mt-5 mb-4 pb-2 border-bottom" id="{{ category[0] | replace: " ","-" }}">
+  <span class="text-capitalize small font-weight-bold">In "{{ category[0] }}"</span>
+</h4>
+<div class="horizontal-scroll-container">
+  <div class="horizontal-scroll">
+    {% assign pages_list = category[1] %}
+    {% for post in pages_list %}
+    {% if post.title != null %}
+    {% if group == null or group == post.group %}
+    <div class="col-md-4 mb-5 post-item">
+      {% include postbox.html %}
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </div>
 </div>
 {% endfor %}
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.horizontal-scroll').forEach(container => {
+    document.querySelectorAll('.horizontal-scroll-container').forEach(container => {
       container.addEventListener('wheel', (e) => {
         if (e.deltaY !== 0) {
           e.preventDefault();
