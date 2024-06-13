@@ -39,3 +39,12 @@
 $(document.links).filter(function() {
 return this.hostname != window.location.hostname;
 }).attr('target', '_blank');
+
+document.body.onload = () => {
+  Array.from(document.querySelectorAll('.nav-link')).forEach((e)=>{
+    e.style.color = 'black';
+  })
+  Array.from(document.querySelectorAll('svg')).forEach((e)=>{
+    e.style.color = 'black';
+  })
+}
