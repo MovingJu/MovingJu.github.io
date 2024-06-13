@@ -11,7 +11,7 @@ topmenu:
   url: "contact/"
 
 - title: My Docs
-  url: "https://movingju.github.io/categories/"
+  url: "categories/"
   class: "ml-2 btn btn-dark text-white px-3"
 
 
