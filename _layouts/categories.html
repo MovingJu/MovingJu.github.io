@@ -31,8 +31,10 @@ permalink: "/categories.html"
     .card-title,
     .card-text {
       font-size: 25px;
-      overflow-wrap:break-word; /* Allow long titles and texts to wrap */
-      word-wrap: break-word; /* Fallback for older browsers */
+    }
+
+    .card-title * {
+      width: 200px;
       word-break: break-all;
     }
 
