@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<section class="contact-form">
+    <form action="https://formspree.io/f/xwkggqva" method="POST">
+        <p class="mb-4 text-center">아래에 성함과 이메일을 입력해 <br>새 소식을 구독할 수 있습니다.</p>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <input class="form-control" type="text" name="name" placeholder="Name*" required>
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="email" name="_replyto" placeholder="E-mail Address*" required>
+            </div>
+        </div>
+        <input class="btn btn-dark" type="submit" value="Send">
+    </form>
+</section>
+
+</body>
+</html>
