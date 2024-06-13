@@ -1,42 +1,27 @@
-<style type="text/css">
-    #email_signup { background: #fff; clear: left; }
-</style>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disqus 댓글 기능</title>
+</head>
+<body>
 
-<div id="email_signup">
-    <form id="email-subscribe-form" name="email-subscribe-form" class="validate" novalidate>
-        <div id="email_signup_scroll">
-            <h2>사실 아직 개발중입니다. 혼자있고 싶어요...</h2>
+<section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'YOUR_DISQUS_SHORTNAME'; // 여기에 자신의 Disqus 단축 이름을 넣어주세요.
+        var disqus_developer = 0;
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Disqus 댓글을 보려면 JavaScript를 활성화하세요. <a href="https://disqus.com/?ref_noscript">Disqus로 이동</a></noscript>
+    <a href="https://disqus.com" class="dsq-brlink">Disqus로 작성된 댓글</a>
+</section>
 
-            <div class="field-group">
-                <input type="email" name="EMAIL" class="required email" id="email-EMAIL" placeholder="E-mail Address">
-            </div>
-            <div class="clear">
-                <input type="button" value="Subscribe" name="subscribe" id="email-subscribe" class="button" onclick="saveEmail()">
-            </div>
-        </div>
-    </form>
-</div>
-
-<script type="text/javascript">
-    function saveEmail() {
-        var email = document.getElementById('email-EMAIL').value;
-        if (validateEmail(email)) {
-            var emails = localStorage.getItem('emails');
-            if (emails) {
-                emails = JSON.parse(emails);
-            } else {
-                emails = [];
-            }
-            emails.push(email);
-            localStorage.setItem('emails', JSON.stringify(emails));
-            alert("구독이 완료되었습니다!");
-        } else {
-            alert("유효한 이메일 주소를 입력하세요.");
-        }
-    }
-
-    function validateEmail(email) {
-        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-</script>
+</body>
+</html>
