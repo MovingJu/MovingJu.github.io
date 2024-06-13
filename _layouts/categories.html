@@ -67,7 +67,7 @@ permalink: "/categories.html"
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.horizontal-scroll-container').forEach(container => {
       container.addEventListener('wheel', (e) => {
-        if (e.deltaY !== 0) {
+        if (e.deltaY !== 0 && container.scrollWidth > container.clientWidth) {
           e.preventDefault();
           container.scrollLeft += e.deltaY;
         }
