@@ -3,7 +3,6 @@ topmenu:
 
 - title: Home
   url: ""
-  class: "text-black px-3"
 
 - title: About
   url: "about/"
@@ -12,7 +11,7 @@ topmenu:
   url: "contact/"
 
 - title: My Docs
-  url: "categories/"
+  url: "https://movingju.github.io/categories/"
   class: "ml-2 btn btn-dark text-white px-3"
 
 
