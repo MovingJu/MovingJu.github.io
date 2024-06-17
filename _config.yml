@@ -28,7 +28,7 @@ authors:
   sal:
     name: MovingJu
     display_name: MovingJu
-    avatar: '/assets/images/system/MovingJu.png'
+    avatar: 'assets/images/system/MovingJu.png'
     email: baramishe@gmail.com
     web: https://github.com/MovingJu/movingju.github.io
     twitter: https://www.instagram.com/baramisjunior/
@@ -36,7 +36,7 @@ authors:
   MovingJu:
     name: MovingJu
     display_name: MovingJu
-    avatar: '/assets/images/system/MovingJu.png'
+    avatar: 'assets/images/system/MovingJu.png'
     email: baramishe@gmail.com
     twitter: https://www.instagram.com/baramisjunior/
     web: https://github.com/MovingJu/movingju.github.io
