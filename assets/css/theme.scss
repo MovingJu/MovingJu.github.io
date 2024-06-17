@@ -6,6 +6,13 @@
 $green:   #08a057 !default;
 $blue:    #3d61fd !default;
 
+// Define dark theme colors
+$dark-background: #121212 !default;
+$dark-text: #e0e0e0 !default;
+$dark-secondary-text: #b0b0b0 !default;
+$dark-border: #333 !default;
+$dark-hover: #1e1e1e !default;
+
 @import 'bootstrap/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
@@ -15,22 +22,20 @@ $blue:    #3d61fd !default;
 html {
     scroll-behavior: smooth;
 }
-
+  
 body {
-    background: #121212; /* Dark background */
+    background: $dark-background;
+    color: $dark-text;
     font-size: 17px;
     transition: all 200ms linear;
     font-family: "PT Sans", sans-serif;
     line-height: 1.7;
-    color: #e0e0e0; /* Light text color */
     overflow-x: hidden;
     padding-top: 116px;
 }
-
 .serif-font {
     font-family: PT Serif;
 }
-
 @media (max-width: 1366px) {
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         width: 90%;
@@ -38,19 +43,15 @@ body {
         padding: 0 25px;
     }
 }
-
 main {
     min-height: 500px;
 }
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .navbar-light .navbar-brand, .text-dark, .dropdown-item {
-    color: #e0e0e0; /* Light text color */
+    color: $dark-text;
 }
-
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 600;
 }
-
 h4, .h4, h5, .h5 {
     line-height: 1.4;
 }
@@ -58,18 +59,16 @@ h4, .h4, h5, .h5 {
 .font-weight-bold {
     font-weight: 600 !important;
 }
-
 a {
     color: inherit;
     text-decoration: none;
     transition: all .4s;
     &:hover {
         text-decoration: none;
-        color: inherit;
+        color: $dark-secondary-text;
         transition: all .4s;
     }
 }
-
 img, video {
     max-width: 100%;
 }
@@ -80,55 +79,48 @@ img, video {
     left: 30px;
     font-size: 13px;
     a {
-        background: #333;
-        color: white;
+        background: $dark-hover;
+        color: $dark-text;
         padding: 2px 4px;
         border-radius: 4px;
     }
 }
-
 small, .small {
     font-size: 90%;
 }
-
 .big {
     font-size: 1.4em;
 }
-
 /* #Navigation
 ================================================== */
 
 .start-header {
-    opacity: 1;
-    transform: translateY(0);
-    padding: 20px 0;    
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+	opacity: 1;
+	transform: translateY(0);
+	padding: 20px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
 }
-
 .start-header.scroll-on {
-    padding: 5px 0;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+	padding: 5px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.05);
 }
-
 .start-header.scroll-on .navbar-brand img {
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
 }
-
 .navigation-wrap {
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
     position: fixed;
-    background: #121212; /* Dark background */
+    background: $dark-background;
 }
-
 .social-icon {
     display: inline-block !important;
     width: 20px;
@@ -151,7 +143,7 @@ small, .small {
 /* Pages
 ================================================== */
 .hero {
-    background: #1d1d1d; /* Dark hero background */
+    background: $dark-hover;
     padding: 5rem 5rem;
 }
 
@@ -169,34 +161,27 @@ small, .small {
         display: block;
     }
 }
-
 @media only screen and (max-width: 767px) {
     .page-header.big {
         font-size: 2.5em;
     }
 }
-
 .google-auto-placed {
     margin-bottom: 2rem;
-}
-
+} 
 .comma:last-child {
     display: none;
 }
 
 .hero h1 {
     font-size: 2.5em;
-    color: #fdd93d; /* Accent color */
 }
-
 .section-title h2 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 27px;
+	font-weight: 700;
+	font-size: 1.4rem;
+	margin-bottom: 27px;
     position: relative;
-    color: #e0e0e0; /* Light text color */
 }
-
 .section-title h2:before {
     margin-bottom: 0;
     position: absolute;
@@ -210,7 +195,7 @@ small, .small {
 }
 
 .section-title span {
-    background-color: #1d1d1d; /* Dark background */
+    background-color: $dark-background;
     position: relative;
     z-index: 2;
     display: inline-block;
@@ -219,95 +204,80 @@ small, .small {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .layout-page .section-title span {
     font-size: 2rem;
     text-transform: none;
     letter-spacing: 0;
 }
-
 .layout-page .section-title h2:before {
     top: 17px;
 }
-
 .article-post ol, .article-post ul {
     margin-bottom: 1.5rem;
 }
-
 .article-post ol ol, .article-post ul ul {
     list-style: disc;
     margin-bottom: 0rem;
 }
-
 .prevnextlinks .thepostlink {
     padding: 20px 0;
     font-size: 17px;
     display: block;
-    color: #e0e0e0; /* Light text color */
+    color: $dark-text;
     font-weight: 500;
 }
-
 .prevnextlinks {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 1px solid $dark-border;
+    border-bottom: 1px solid $dark-border;
     margin-left: 0;
     margin-right: 0;
 }
-
 .prevnextlinks .rightborder {
-    border-right: 1px solid #333;
+    border-right: 1px solid $dark-border;
 }
-
 .author-thumb {
     object-position: center;
     width: 50px;
     height: 50px;
     margin-right: 9px;
     border-radius: 100%;
-    border: 2px solid #eaeaea;
+    border: 2px solid $dark-border;
     padding: 2px;
     object-fit: cover;
 }
-
 .post-top-meta {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
     margin-top: 3rem;
 }
-
 .post-top-meta .author-thumb {
-    width: 72px;
-    height: 72px;
+	width: 72px;
+	height: 72px;
 }
-
 .post-top-meta.authorpage .author-thumb {
-    margin-top: 40px;
+	margin-top: 40px;
 }
-
 .post-top-meta span {
-    font-size: 0.9rem;
-    color: rgba(224, 224, 224, 0.7);
-    display: inline-block;
+	font-size: 0.9rem;
+	color: $dark-secondary-text;
+	display: inline-block;
 }
-
 .post-top-meta .author-description {
-    margin-bottom: 5px;
-    margin-top: 10px;
-    font-size: 0.95rem;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	font-size: 0.95rem;
 }
-
 .author-meta {
-    flex: 1 1 auto;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
+	flex: 1 1 auto;
+	white-space: nowrap !important;
+	text-overflow: ellipsis !important;
+	overflow: hidden !important;
 }
-
 span.post-name, span.post-date, span.author-meta {
-    display: inline-block;
+	display: inline-block;
 }
 
 span.post-read-more a {
-    color: rgba(224, 224, 224, 0.7);
+	color: $dark-secondary-text;
     align-items: center;
     display: inline-block;
     float: right;
@@ -315,31 +285,165 @@ span.post-read-more a {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    border: 1px solid #d0d0d0;
+    border: 1px solid $dark-border;
     border-radius: 50%;
 }
-
 span.post-name a, span.post-read-more a:hover {
-    color: rgba(224, 224, 224, 1);
+	color: $dark-text;
 }
-
 .dot:after {
-    content: "·";
-    margin-left: 3px;
-    margin-right: 3px;
+	content: "·";
+	margin-left: 3px;
+	margin-right: 3px;
 }
-
 .mainheading h1.posttitle {
-    font-weight: 700;
-    margin-bottom: 2rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
 }
-
 .link-dark {
-    color: rgba(224, 224, 224, 1);
+	color: $dark-text;
 }
-
-.article-post>* {
+.article-post > * {
     margin-bottom: 1.5rem;
 }
-
-.article
+.article-post {
+    font-size: 1.18em;
+    line-height: 1.64;
+	color: $dark-text;
+    code {
+        font-size: 15px;
+    }
+    a {
+        color: inherit; 
+        box-shadow: inset 0 -2px 0 rgba(0,0,0,0.05);
+        transition: all 0.3s;
+        &:hover {
+            color: #0084ff; /* Accent color on hover */
+        }
+    }
+}
+.article-post blockquote {
+    background: $dark-hover;
+    padding: 15px;
+    border-radius: 0.35em;
+    border-left: 3px solid $green;
+    margin-bottom: 1.5rem;
+}
+.post-top-meta {
+    display: flex;
+    align-items: center;
+    span.author-meta {
+        margin-right: 20px;
+        font-weight: 600;
+    }
+    .author-thumb {
+        margin-right: 20px;
+    }
+    span.post-read-more {
+        margin-left: auto;
+    }
+}
+.post-bottom-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid $dark-border;
+    .tags {
+        span {
+            font-size: 13px;
+            &:after {
+                content: ",";
+                margin-right: 5px;
+            }
+            &:last-child:after {
+                content: "";
+                margin-right: 0;
+            }
+        }
+    }
+    .social-share {
+        a {
+            font-size: 13px;
+            margin-left: 5px;
+            border: 1px solid $dark-border;
+            padding: 3px 7px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            &:hover {
+                background: $dark-hover;
+                color: white;
+            }
+        }
+    }
+}
+.pagination {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    ul {
+        justify-content: center;
+        li {
+            margin: 0 4px;
+            a {
+                padding: 0.5rem 0.75rem;
+                color: $dark-text;
+                border: 1px solid $dark-border;
+                border-radius: 0.25rem;
+                transition: all 0.3s;
+                &:hover {
+                    background: $dark-hover;
+                    color: white;
+                }
+            }
+            &.active a {
+                background: $dark-hover;
+                color: white;
+            }
+        }
+    }
+}
+.sidebar {
+    .widget {
+        margin-bottom: 2rem;
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: $dark-text;
+        }
+        ul {
+            li {
+                margin-bottom: 0.5rem;
+                a {
+                    color: $dark-secondary-text;
+                    &:hover {
+                        color: $dark-text;
+                    }
+                }
+            }
+        }
+    }
+}
+.footer {
+    background: $dark-hover;
+    padding: 4rem 0;
+    color: $dark-text;
+    .footer-links {
+        a {
+            color: $dark-text;
+            &:hover {
+                color: $dark-secondary-text;
+            }
+        }
+    }
+    .social-links {
+        a {
+            margin-right: 15px;
+            color: $dark-text;
+            &:hover {
+                color: $dark-secondary-text;
+            }
+        }
+    }
+}
