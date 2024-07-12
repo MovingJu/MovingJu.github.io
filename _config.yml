@@ -16,9 +16,7 @@ feed_update_period: weekly
 feed_update_frequency: 1
 
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+highlighter: rouge
 
 sass:
   sass_dir: _sass
