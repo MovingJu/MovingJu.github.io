@@ -15,12 +15,21 @@ feed_items: 10
 feed_update_period: weekly
 feed_update_frequency: 1
 markdown: kramdown
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+
+# Markdown Processors
 kramdown:
-  syntax_highlighter_opts:
-    disable: true
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 sass:
   sass_dir: _sass
   style: :compressed
+
 ganalytics: UA-113961478-1
 
 # Authors
