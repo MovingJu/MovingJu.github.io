@@ -16,14 +16,9 @@ feed_update_period: weekly
 feed_update_frequency: 1
 markdown: kramdown
 
-# Conversion
-markdown:    kramdown
-highlighter: rouge
-
-# Markdown Processors
+markdown: kramdown
 kramdown:
   input: GFM
-  auto_ids: true
   syntax_highlighter: rouge
 
 sass:
