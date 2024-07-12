@@ -30,7 +30,7 @@ gtag('config', '{{site.ganalytics}}');
 </script>
 {% endif %}
 
-<link href="assets/css/syntax.css" rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/theme.scss"> 
 </head>   
     
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
