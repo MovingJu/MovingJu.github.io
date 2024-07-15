@@ -119,21 +119,35 @@
 <!-- Custom JavaScript for adjusting scroll position -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var hash = window.location.hash;
-    if (hash) {
-        var targetElement = document.querySelector(hash);
-        if (targetElement) {
-            var headerOffset = 70; // Adjust this value to match your header's height
-            var elementPosition = targetElement.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
+    function adjustScrollPosition() {
+        var hash = window.location.hash;
+        if (hash) {
+            var targetElement = document.querySelector(hash);
+            if (targetElement) {
+                var headerOffset = 70; // Adjust this value to match your header's height
+                var elementPosition = targetElement.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
         }
     }
+
+    // Adjust scroll position when the page loads
+    adjustScrollPosition();
+
+    // Adjust scroll position when internal links are clicked
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.history.pushState(null, null, this.getAttribute('href'));
+            adjustScrollPosition();
+        });
+    });
 });
-</script> 
+</script>
 
 </body>
 </html>
