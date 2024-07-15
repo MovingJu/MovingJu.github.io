@@ -29,6 +29,26 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '{{site.ganalytics}}');
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      if (window.location.hash) {
+          var hash = window.location.hash;
+          var targetElement = document.querySelector(hash);
+          if (targetElement) {
+              var headerOffset = document.querySelector('header').offsetHeight; // 헤더의 높이를 구합니다
+              var elementPosition = targetElement.getBoundingClientRect().top;
+              var offsetPosition = elementPosition - headerOffset;
+              
+              window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+              });
+          }
+      }
+  });
+</script>
+
 {% endif %}
 
 </head>   
