@@ -108,6 +108,9 @@ post_class: post-template
 
 		<!-- Sidebar -->
         <div class="col-sm-4">
+            <h5><span>목차</span></h5>
+            {% include toc.html html=content %}
+            
             {% include sidebar.html %}
             </div>
         
