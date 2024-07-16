@@ -37,6 +37,7 @@
                     if (targetElement) {
                         var header = document.querySelector('.navigation-wrap'); // Adjust this selector based on your header class or ID
                         var headerOffset = header ? header.offsetHeight : 0;
+                        headerOffset += 20;
                         var elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                         var offsetPosition = elementPosition - headerOffset;
 
