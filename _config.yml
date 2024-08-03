@@ -17,6 +17,8 @@ feed_update_frequency: 1
 search: true
 
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
