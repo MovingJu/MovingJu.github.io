@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% if page.use_math %}
-        {% include mathjax_support.html %}
-    {% endif %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
@@ -81,11 +79,13 @@
             });
         });
     </script>
-
+  {% include mathjax.html %}
 </head>
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body class="{{ layout }}">
+<body class="{{ layout }} math-content">
+
+    
 
 <!-- Menu Navigation -->
 <div class="navigation-wrap start-header start-style">
