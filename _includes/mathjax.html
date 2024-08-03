@@ -8,6 +8,14 @@
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
       processClass: "math-content"
+    },
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"]
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
     }
   });
 </script>
