@@ -17,6 +17,10 @@ feed_update_frequency: 1
 search: true
 
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 kramdown:
   input: GFM
